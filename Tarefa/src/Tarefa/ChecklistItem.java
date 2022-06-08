@@ -2,8 +2,7 @@ package Tarefa;
 
 import java.util.UUID;
 
-public class Tarefa {
-
+public class ChecklistItem {
     private String uuid;
 
     private String nome;
@@ -14,38 +13,20 @@ public class Tarefa {
 
     private int ordem;
 
-    public Tarefa() {
-        this.setUuid(UUID.randomUUID().toString());
+    private ChecklistItem[] checklist;
 
+    public ChecklistItem() {
+        this.setUuid(UUID.randomUUID().toString());
     }
 
     public void completar() {
-        setCompletar(true);
-        for (ChecklistItem item : this.getChecklist()) {
-            if (item != null) {
-                item.completar();
-            }
+        this.setCompletar(true);
         }
-    }
-    public void criarChecklist(int tamanho) {
-        this.setChecklist(new ChecklistItem[tamanho]);
 
-    }
 
     public boolean temChecklist() {
 
         return this.getChecklist() != null;
-    }
-
-    public boolean adicionarChecklistItem(ChecklistItem Item) {
-        for (int i = 0; i < this.getChecklist().length; i++) {
-            if (this.getChecklist[i] == null) {
-                this.getChecklist[i] = item;
-                return true;
-            }
-        }
-
-        return false;
     }
 
     //gets e sets
@@ -85,12 +66,20 @@ public class Tarefa {
     public void setOrdem(int ordem) {
         this.ordem = ordem;
     }
+
+    public Tarefa.ChecklistItem[] getChecklist() {
+        return checklist;
+    }
+
+    public void setChecklist(Tarefa.ChecklistItem[] checklist) {
+        this.checklist = checklist;
+    }
+
     //cabouu
 
 
     public void setCompletar(boolean completa) {
         this.completa = completa;
     }
+
 }
-
-
