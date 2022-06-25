@@ -21,8 +21,8 @@ public class Item {
         in.nextLine();
         System.out.println("Informe algum feedback (opcional): ");
         a.setFeedback(in.nextLine());
-        for(int i = 0; i < getAvaliacoes().length; i++){
-            if(getAvaliacoes()[i] == null){
+        for (int i = 0; i < getAvaliacoes().length; i++) {
+            if (getAvaliacoes()[i] == null) {
                 getAvaliacoes()[i] = a;
                 break;
             }
@@ -32,13 +32,13 @@ public class Item {
     public double getTotalRating() {
         double soma = 0;
         int contador = 0;
-        for (Avaliação a : getAvaliacoes()){
-            if (a != null){
+        for (Avaliação a : getAvaliacoes()) {
+            if (a != null) {
                 soma += a.getRating();
                 contador++;
             }
         }
-        return soma/contador;
+        return soma / contador;
     }
 
     //GETTERS & SETTERS

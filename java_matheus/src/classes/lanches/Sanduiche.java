@@ -1,25 +1,27 @@
 package classes.lanches;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public abstract class Sanduiche extends lanche {
 
-    private String[] adicional = new String[10];
+    private HashMap<String , ArrayList<Sanduiche>> sanduiche = new HashMap<>();
 
 
     public void adicionarAdicional(String adicionar) {
-        for (int i = 0; i < 10; i++) {
-            if (this.adicional[i] == null) {
-                this.adicional[i] = adicionar;
-                break;
-            }
-        }
+        this.adicional.add(adicionar);
     }
 
     public String[] getAdicional() {
-        return adicional;
+        return adicional.toArray(new String[0]);
     }
 
-    public void setAdicional(String[] adicional) {
+    public void setAdicional(ArrayList<String> adicional) {
         this.adicional = adicional;
+    }
+
+    public double getValor(){
+        double valorOriginalLanche super.getValor();
     }
 
 }

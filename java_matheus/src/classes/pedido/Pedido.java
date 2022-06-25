@@ -2,9 +2,11 @@ package classes.pedido;
 
 import classes.lanches.*;
 
+import java.util.ArrayList;
+
 public class Pedido {
 
-    private lanche[] lanches = new lanche[10];
+    private ArrayList<lanche> lanches = new ArrayList<>();
 
     public void imprimirComanda() {
         for (lanche l : this.getLanches()) {
@@ -55,9 +57,7 @@ public class Pedido {
     public double calcularvalorTotal() {
         double vlrTotal = 0;
         for (lanche l : this.getLanches()) {
-            if (l != null) {
-                vlrTotal += l.getValor();
-            }
+            vlrTotal += l.getValor();
         }
 
 
@@ -66,16 +66,12 @@ public class Pedido {
     }
 
     public void adicionarLanche(lanche lanche) {
-        for (int i = 0; i < 10; i++) {
-            if (this.lanches[i] == null) {
-                this.lanches[i] = lanche;
-                break;
-            }
-        }
+        this.lanches.add(lanche);
     }
 
-    public lanche[] getLanches() {
-
+    public ArrayList<lanche> getLanches() {
         return this.lanches;
+
+
     }
 }
