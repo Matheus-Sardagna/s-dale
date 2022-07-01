@@ -17,7 +17,7 @@ public class main {
         System.out.println("Infome a descrição da tarefa: ");
         t.setDescrica(in.nextLine());
         System.out.println("Ordem da tarefa: ");
-        t.setOrdem(in.nextLine());
+        t.setOrdem(Integer.parseInt(in.nextLine()));
         in.nextLine();
         System.out.println("Tarefa tem checklist? (S/N)");
         System.err.println();

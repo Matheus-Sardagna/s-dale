@@ -4,19 +4,6 @@ import java.util.ArrayList;
 
 public class Aviao implements MeioTransporte {
     private ArrayList<AssentoVoo> assentos = new ArrayList<>();
-
-    public Aviao(int linhaCadeiras) {
-        for (int i = 1; i <= 4 * linhaCadeiras; i++) {
-            AssentoVoo a = new AssentoVoo();
-            a.setCodigo(String.valueOf(i));
-            assentos.add(a);
-        }
-    }
-
-
-    //Getrs and Setrs
-
-
     public ArrayList<AssentoVoo> getAssentos() {
         return assentos;
     }
@@ -25,16 +12,40 @@ public class Aviao implements MeioTransporte {
         this.assentos = assentos;
     }
 
+
+
+
+
+    public Aviao(int linhaCadeirasLuxo , int linhaCadeirasEconomicas) {
+        for (int i = 1; i <= 4 * linhaCadeirasLuxo; i++) {
+            AssentoVoo a = new AssentoVoo();
+            a.setClasse(ClasseAssentoVoo.Luxo);
+            assentos.add(a);
+        }
+        for (int i = 0; i < 6 * linhaCadeirasEconomicas; i++){
+            AssentoVoo a = new AssentoVoo();
+            a.setClasse(ClasseAssentoVoo.Economica);
+            assentos.add(a);
+        }
+    }
+
+
+    //Getrs and Setrs
+
+
     @Override
     public boolean verificaOcupacao(String Verificar) {
         for (AssentoVoo a : this.assentos) {
-            if (a.getClasse().equalsIgnoreCase(Verificar)) {
+            if (a.getCodigo().equalsIgnoreCase(Verificar)) {
                 return a.isOcupado();
             }
 
         }
         return false;
     }
+
+
+
 
     @Override
     public int quantidadelivre() {
@@ -84,9 +95,9 @@ public class Aviao implements MeioTransporte {
         return null;
     }
 
-    public Assento getAssento(String assento, String classe) {
+    public Assento getAssento(String assento, ClasseAssentoVoo classe) {
         for (AssentoVoo a : this.assentos) {
-            if (a.getCodigo().equalsIgnoreCase(assento) && a.getClasse().equalsIgnoreCase(classe)) {
+            if (a.getCodigo().equalsIgnoreCase(assento) && a.getClasse().equals(classe)) {
                 return a;
             }
 
