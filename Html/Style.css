@@ -1,6 +1,6 @@
 
 body{
-    background-color: azure;
+    background-image: url(https://pa1.narvii.com/6334/aac264f96aefb71b1347e01d538efcdb836b32f7_hq.gif);
 }
 
 /*#Pr-1{
@@ -24,14 +24,99 @@ i {
     color: darkgoldenrod;
 }*/
 
+table.con{
+    margin: 5% 15% 0% 15%;
+    width: 70%;
+}
+
 table{
-    border: 1px solid black;
+    /* border: 1px solid cornflowerblue; */
     width: 100%;
     border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table thead{
+    border-top-left-radius: 0%;
+    border-radius: 0%;
+}
+
+tfoot tr{
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 0;
+   
 }
 
 th{
     text-align: start;
-    background-color: #b3b3b3;
+    background-color: cornflowerblue;
     padding: 8px 4px;
 }
+
+tfoot tr.filhotes td {
+    text-align: right;
+}
+
+small {
+    font-size: 12px;
+}
+
+tr{
+    border-bottom: 1px solid cornflowerblue;
+    border-right: 1px solid cornflowerblue;
+    border-left: 1px solid cornflowerblue;
+    
+}
+
+.w-50{
+    width: 50%;
+}
+
+.r-40{
+    width: 40%;
+}
+
+.edit-cell{
+    text-align: center;
+}
+
+.edit-cell a:hover{
+    background-color: rgb(3, 112, 207);
+}
+
+.edit-cell a{
+    text-decoration: none;
+    background-color: cornflowerblue;
+    padding: 4px, 8px;
+    display: inline-block;
+    color: aliceblue;
+    border-radius: 4px;
+}
+
+.Titu{
+    text-decoration: none;
+    background-color: cornflowerblue;
+    padding: 4px 8px;
+    display: inline-block;
+    color: aliceblue;
+    border-radius: 10px;
+    text-align: center;
+    margin: 2px 40% 0% 40%;
+    width: 16%;
+}
+
+.titi .Titu:hover{
+    background-image: url('https://c.tenor.com/EvNCyjP1IxQAAAAd/feliz-alegre.gif');
+    background-repeat: no-repeat;
+    background-size: 300px 35px;
+}
+
+li{
+    list-style: none;
+}
+
+h2.pagMinha{
+    text-align: center;
+}
+
