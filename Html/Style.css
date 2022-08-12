@@ -1,6 +1,6 @@
-
 body{
-    background-image: url(https://pa1.narvii.com/6334/aac264f96aefb71b1347e01d538efcdb836b32f7_hq.gif);
+  
+    background-repeat: no-repeat;
 }
 
 /*#Pr-1{
@@ -102,16 +102,24 @@ tr{
     color: aliceblue;
     border-radius: 10px;
     text-align: center;
-    margin: 2px 40% 0% 40%;
-    width: 16%;
+    /* margin: 2px 40% 0% 40%;
+    width: 16%; */
+    display: inline-block;
+
 }
+
+
 
 .titi .Titu:hover{
     background-image: url('https://c.tenor.com/EvNCyjP1IxQAAAAd/feliz-alegre.gif');
     background-repeat: no-repeat;
     background-size: 300px 35px;
 }
-
+ul{
+    text-align: center;
+   padding: 0%;
+   margin: 0 60px; 
+}
 li{
     list-style: none;
 }
@@ -120,3 +128,35 @@ h2.pagMinha{
     text-align: center;
 }
 
+@media only screen and (max-width: 600px){
+    body{
+        background-image: url(https://c.tenor.com/FKI1u4pGzjsAAAAM/kimetsu.gif);
+        background-size: 400px 702px;
+    }
+    li.titi{
+        margin: 0 48px; 
+
+}
+}
+
+.Titulos{
+    display: block ;
+    box-shadow: 8px 8px 8px black;
+    text-align: center;
+    background-image: url();
+    margin: 40px 150px;
+    padding: 30px;
+    
+}
+.questo{
+    display: inline-block;
+    text-align: center;
+    margin: 10px 5px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+#inserir{
+    border-radius: 20px;
+    margin: 290px 50px 50px 680px;
+    background-image: url(https://pa1.narvii.com/6334/aac264f96aefb71b1347e01d538efcdb836b32f7_hq.gif);
+}
