@@ -1,6 +1,6 @@
 body{
+    background-image: url(https://pa1.narvii.com/6334/aac264f96aefb71b1347e01d538efcdb836b32f7_hq.gif);
   
-    background-repeat: no-repeat;
 }
 
 /*#Pr-1{
@@ -81,6 +81,10 @@ tr{
     text-align: center;
 }
 
+.edit-cell button {
+    display: inline-block;
+}
+
 .edit-cell a:hover{
     background-color: rgb(3, 112, 207);
 }
@@ -158,5 +162,57 @@ h2.pagMinha{
 #inserir{
     border-radius: 20px;
     margin: 290px 50px 50px 680px;
-    background-image: url(https://pa1.narvii.com/6334/aac264f96aefb71b1347e01d538efcdb836b32f7_hq.gif);
+    background-image: url(https://i.makeagif.com/media/4-04-2018/tqVg2W.gif);
+}
+
+#Titulinhos {
+    background-image: url(https://c.tenor.com/bw4tEDfUR44AAAAC/tijolada-ladr%C3%A3o.gif);
+}
+
+#tabelaas {
+    background-image: url(https://c.tenor.com/_n40rGDgKFgAAAAC/chloe-meme.gif);
+}
+
+.btn {
+    border: 0;
+    background-color: transparent;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.btn.btn-success {
+    background-color: rgba(75, 191, 75);
+}
+
+.btn.btn-success:hover {
+    background-color: rgb(100, 220, 100);
+}
+
+.btn.btn-success:active {
+    background-color: rgb(54, 153, 54);
+}
+
+.btn.btn-warning {
+    background-color: rgb(228, 209 , 62);
+}
+
+.btn.btn-warning:hover {
+    background-color: rgb(247, 227 , 77);
+}
+
+.btn.btn-warning:active {
+    background-color: rgb(179, 163 , 43);
+}
+
+.btn.btn-danger {
+    background-color: rgb(228, 62 , 62);
+}
+
+.btn.btn-danger:hover {
+    background-color: rgb(247, 77 , 77);
+}
+
+.btn.btn-danger:active {
+    background-color: rgb(179, 43 , 43);
 }

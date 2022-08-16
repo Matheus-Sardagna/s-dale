@@ -10,6 +10,27 @@
     
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="Style.css">
+    <script type="text/javascript">
+
+        var count = 0;
+
+        // function onClick() {
+        //     count++;
+        //     console.log(count);
+        // }
+
+        function load() {
+            let guess = Math.floor(Math.random() * 11);
+            console.log(guess);
+            let userInput = -1;
+             while(guess != userInput) {
+               userInput = prompt("Escreva ai até 11")
+            }
+        }
+  
+         window.onload = load;
+      </script>
+
 </head>
 
 <body>
@@ -49,7 +70,8 @@
             <li class="titi">
                 <a class="Titu" href="links.html">links</a>
             </li>
-    </ul>
+        </ul>
+        <button onclick="onClick()">Contar</button>
 
     </aside>
 
