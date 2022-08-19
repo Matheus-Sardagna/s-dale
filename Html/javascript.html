@@ -32,7 +32,19 @@
         }
     }
 
+    function async() {
+        setTimeout(() => {
+            document.getElementById("async").innerHTML =
+            "Eu <3 JavaScript"
+        }, 10000);}
         
+
+    async function asyncMsg() {
+        document.getElementById("async")
+            .innerHTML = await getMsg();
+        document.getElementById("async_btn").style = 
+            "display: none;";
+    }
 
         // function checkSubmit(e) {
         //     if(e.key === "Enter" || e.keyValue === 13) {
@@ -47,5 +59,8 @@
     <input type="text" name="teste" id="input-txt">
     <button onclick="submitMsg()">Enviar</button>
     
+
+    <div id="async"></div>
+    <button onclick="asyncMsg()">Mensagem</button>
 </body>
 </html>
