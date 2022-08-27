@@ -1,5 +1,5 @@
 body{
-    background-image: url(https://pa1.narvii.com/6334/aac264f96aefb71b1347e01d538efcdb836b32f7_hq.gif);
+    /* background-image: url(https://pa1.narvii.com/6334/aac264f96aefb71b1347e01d538efcdb836b32f7_hq.gif);  */
   
 }
 
@@ -119,14 +119,14 @@ tr{
     background-repeat: no-repeat;
     background-size: 300px 35px;
 }
-ul{
+/* ul{
     text-align: center;
    padding: 0%;
    margin: 0 60px; 
-}
-li{
+} */
+/* li{
     list-style: none;
-}
+} */
 
 h2.pagMinha{
     text-align: center;
@@ -215,4 +215,26 @@ h2.pagMinha{
 
 .btn.btn-danger:active {
     background-color: rgb(179, 43 , 43);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .nav {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.container #img-container.margin {
+    margin: 24px 0px;
+}
+
+.container #img-container img {
+    border-radius: 8px;
+    border: 4px solid rgb(174, 0, 255);
 }

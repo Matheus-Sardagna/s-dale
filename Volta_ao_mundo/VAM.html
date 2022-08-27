@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volta ao Mundo</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="Style.css">
+    <script type = "text/javascript">
+
+        var volta = {"v": [] ,"o": [], "l": [],"t": [],"a": []};
+    
+        var contador = 0;
+
+        function Local(){
+            let local = prompt("Digite um local: ");
+            switch(contador){
+            case(0): {
+                if(local.slice(0,1) == "v"){
+                    
+                    volta["v"].push(local);
+                    contador ++;
+                    }
+                }
+            case(1): {
+                if(local.slice(0,1) == "o"){
+                    volta["o"].push(local);
+                    contador++;
+                    }
+                }
+            case(2): {
+                if(local.slice(0,1) == "l"){
+                    volta["l"].push(local);
+                    contador++;}
+                   
+                }
+
+            case(3): {
+                if(local.slice(0,1) == "t"){
+                    volta["t"].push(local);
+                    contador++;
+                    }
+                }   
+            case(4): {
+                if(local.slice(0,1) == "a"){
+                    volta["a"].push(local);
+                    contador = 0;
+                }
+            }
+        }
+
+    }
+
+
+        console.log(local);
+         
+
+    
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+        <button onclick="Local()">Posso ir?</button>
+        </div>
+    </div>
+</body>
+
+</html>

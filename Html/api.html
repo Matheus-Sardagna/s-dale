@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="Style.css">
+    <script type="text/javascript"> 
+        
+        function requestImg(text, gif) {
+            
+            let url = "";
+
+            if (gif) {
+                url = "https://cataas.com/cat/gif"
+            } else {
+                url = text == null || text == "" ?
+                "https://cataas.com/cat" :
+                `https://cataas.com/cat/says/${text}`;
+            }
+
+            url += "?json=true";
+
+            let imgContainer = document.getElementById("img-container");
+            imgContainer.innerHTML = `
+                <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+            `
+            let req = new XMLHttpRequest();
+            req.open("GET", url, true);
+            req.onload = () => {
+                imgContainer.innerHTML += `
+                    <img src="https://cataas.com${JSON.parse(req.responseText).url}" style="display: none;"/>
+                `;
+
+                imgContainer.getElementsByTagName("img")[0].onload = () => {
+                    imgContainer.getElementsByTagName("img")[0].style = "";
+                    imgContainer.getElementsByClassName("lds-ellipsis")[0].style = "display: none;"
+                    Array.from(document.getElementsByTagName("button")).forEach(btn => btn.disabled = false);
+                }
+            document.getElementsByTagName("button")[0].disabled = true;
+            req.send(null);
+            }
+            Array.from(document.getElementsByTagName("button")).forEach(btn => btn.disabled = true);
+            req.send(null);
+
+        }
+        function loadImg() {
+            requestImg();
+        }
+
+        function loadImgWithText() {
+            let texto = prompt("Digite o texto a ser inserido na imagem");
+            if (texto != null) {
+                requestImg(texto);
+            }
+        }
+
+        function loadGif() {
+            requestImg(null, true);
+        }
+
+        
+//         function loadImgWidthText() {
+
+//             let texto = prompt("Digite o texto a ser inserido na imagem");
+
+//             let req = new XMLHttpRequest();
+//             req.open ("GET", `https://cataas.com/cat/says/${texto}?json=true`, true);
+//             req.onload = () => {
+//                     let img = document.getElementsByTagName("img")[0]
+//                     img.src = "https://cataas.com" +
+//                         JSON.parse(req.responseText).url;
+//             img.onload = () => document.getElementsByTagName("button")[0].disabled = false;
+
+// }
+//             document.getElementsByTagName("button")[0].disabled = true;
+//             req.send(null);
+            // let req = new XMLHttpRequest();
+            // req.open("GET", "https://cataas.com/cat?json=true");
+            // req.send(null);
+            // document.getElementsByTagName("img")[0].src = "https://cataas.com" +
+            //     JSON.parse(req.responseText).url;
+        // }
+
+
+        // function loadImg() {
+        //     requestImg();
+
+        // }
+        
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div id="img-container"></div>
+        <div class="nav">
+            <button onclick="loadImg()">Get CAT</button>
+            <button onclick="loadImgWithText()">Get CAT with text</button>
+            <button onclick="loadGif()">Get CAT gif</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="Style.css">
+    <script type="text/javascript">
+        function loadCharList() {
+            let req = new XMLHttpRequest();
+            req.open("GET", "http://hp-api.herokuapp.com/api/characters", false);
+            req.send(null);
+            document.getElementById("charlist").innerHTML = 
+                JSON.parse(req.responseText).map(char => `
+                    <li> ${char.name} </li>
+                `).join("");
+        }
+    </script>
+</head>
+<body onload="loadCharList()">
+    <ul id="charlist"></ul>
+</body>
+</html> -->
