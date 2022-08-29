@@ -14,40 +14,84 @@
         var contador = 0;
 
         function Local(){
-            let local = prompt("Digite um local: ");
-            switch(contador){
-            case(0): {
-                if(local.slice(0,1) == "v"){
+            while (true){
+                let local = prompt("Digite um local: ");
+                switch(contador){
+                case(0): {
+                    if(local.slice(0,1) == "v"){
+                        
+                        volta["v"].push(local);
+                        contador ++;
+                        }
+                    }
+                case(1): {
+                    var chances = 0;
+                    if(local.slice(0,1) == "o"){
+                        volta["o"].push(local);
+                    }else{
+                        if(chances > 3){
+                            alert("Acabou suas chances!! ")
+                            break;
+                            }else{
+                                alert("Escreva outro pais: ");
+                                chances ++;
+                                break;
+                            }
+                        }
+                        contador++;
+                    }
                     
-                    volta["v"].push(local);
-                    contador ++;
+                case(2): {
+                    var chances = 0;
+                    if(local.slice(0,1) == "l"){
+                        volta["l"].push(local);
+                    }else{
+                        if(chances > 3){
+                            alert("Acabou suas chances!! ")
+                            break;
+                            }else{
+                                alert("Escreva outro pais: ");
+                                chances ++;
+                                break;
+                            }
+                        }
+                        contador++;
                     }
-                }
-            case(1): {
-                if(local.slice(0,1) == "o"){
-                    volta["o"].push(local);
-                    contador++;
-                    }
-                }
-            case(2): {
-                if(local.slice(0,1) == "l"){
-                    volta["l"].push(local);
-                    contador++;}
-                   
-                }
 
-            case(3): {
-                if(local.slice(0,1) == "t"){
-                    volta["t"].push(local);
-                    contador++;
-                    }
-                }   
-            case(4): {
-                if(local.slice(0,1) == "a"){
-                    volta["a"].push(local);
-                    contador = 0;
+                case(3): {
+                    var chances = 0;
+                    if(local.slice(0,1) == "t"){
+                        volta["t"].push(local);
+                    }else{
+                        if(chances > 3){
+                            alert("Acabou suas chances!! ")
+                            break;
+                            }else{
+                                alert("Escreva outro pais: ");
+                                chances ++;
+                                break;
+                            }
+                        }
+                        contador++;
+                    }   
+                case(4): {
+                    if(local.slice(0,1) == "a"){
+                        volta["a"].push(local);
+                        contador = 0;
+                    }else{
+                        if(chances > 3){
+                            alert("Acabou suas chances!! ")
+                            break;
+                            }else{
+                                alert("Escreva outro pais: ");
+                                chances ++;
+                                break;
+                            }
+                        }
+                        contador++;
                 }
             }
+            break;
         }
 
     }
@@ -63,7 +107,8 @@
 <body>
     <div class="container">
         <div class="nav">
-        <button onclick="Local()">Posso ir?</button>
+            <img id="img-container" src="https://img.elo7.com.br/product/original/1551E7F/painel-volta-ao-mundo-g-frete-gratis-banner-festa-infantil.jpg"/>
+            <button onclick="Local()">Posso ir?</button>
         </div>
     </div>
 </body>

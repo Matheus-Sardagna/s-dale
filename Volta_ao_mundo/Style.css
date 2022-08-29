@@ -10,3 +10,8 @@
     flex-direction: row;
     gap: 4px;
 }
+
+.container #img-container img {
+    margin: 24px 0px;
+    image-rendering: 50px 40px;
+}
