@@ -21,8 +21,17 @@
                     if(local.slice(0,1) == "v"){
                         
                         volta["v"].push(local);
-                        contador ++;
+                        }else{
+                        if(chances > 3){
+                            alert("Acabou suas chances!! ")
+                            break;
+                            }else{
+                                alert("Escreva outro pais: ");
+                                chances ++;
+                                break;
+                            }
                         }
+                        contador ++;
                     }
                 case(1): {
                     var chances = 0;
