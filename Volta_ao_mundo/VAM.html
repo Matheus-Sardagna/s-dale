@@ -18,70 +18,79 @@
                 let local = prompt("Digite um local: ");
                 switch(contador){
                 case(0): {
+                    var chances = 0;
                     if(local.slice(0,1) == "v"){
                         
                         volta["v"].push(local);
+                        contador ++;
+                        alert("Sim vc pode ir!! ");
                         }else{
-                        if(chances > 3){
-                            alert("Acabou suas chances!! ")
-                            break;
+                            if(chances > 3){
+                                alert("Acabou suas chances!! ");
+                                contador++;
                             }else{
-                                alert("Escreva outro pais: ");
+                                local = prompt("Escreva outro pais: ");
                                 chances ++;
-                                break;
                             }
                         }
-                        contador ++;
+                        
                     }
                 case(1): {
                     var chances = 0;
                     if(local.slice(0,1) == "o"){
                         volta["o"].push(local);
+                        contador ++;
+                        alert("Sim vc pode ir!! ")
                     }else{
                         if(chances > 3){
-                            alert("Acabou suas chances!! ")
-                            break;
+                            alert("Acabou suas chances!! ");
+                            contador ++;
+                           
                             }else{
                                 alert("Escreva outro pais: ");
                                 chances ++;
-                                break;
+                                continue;
                             }
                         }
-                        contador++;
+                        
                     }
                     
                 case(2): {
                     var chances = 0;
                     if(local.slice(0,1) == "l"){
                         volta["l"].push(local);
+                        contador ++;
+                        alert("Sim vc pode ir!! ")
                     }else{
                         if(chances > 3){
                             alert("Acabou suas chances!! ")
-                            break;
+                            
                             }else{
                                 alert("Escreva outro pais: ");
                                 chances ++;
-                                break;
+                                continue;
                             }
                         }
-                        contador++;
+                        
                     }
 
                 case(3): {
                     var chances = 0;
                     if(local.slice(0,1) == "t"){
                         volta["t"].push(local);
+                        contador++;
+                        alert("Sim vc pode ir!! ")
                     }else{
                         if(chances > 3){
                             alert("Acabou suas chances!! ")
-                            break;
+                            contador++;
                             }else{
                                 alert("Escreva outro pais: ");
                                 chances ++;
-                                break;
+                                continue;
                             }
                         }
-                        contador++;
+                        
                     }   
                 case(4): {
                     if(local.slice(0,1) == "a"){
@@ -89,15 +98,16 @@
                         contador = 0;
                     }else{
                         if(chances > 3){
-                            alert("Acabou suas chances!! ")
-                            break;
+                            alert("Acabou suas chances!! ");
+                            contador = 0;
+                           
                             }else{
                                 alert("Escreva outro pais: ");
-                                chances ++;
-                                break;
+                                chances = 0;
+                                continue;
                             }
                         }
-                        contador++;
+                        
                 }
             }
             break;
