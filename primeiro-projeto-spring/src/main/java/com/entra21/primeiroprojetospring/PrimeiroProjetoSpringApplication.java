@@ -11,3 +11,8 @@ public class PrimeiroProjetoSpringApplication {
 	}
 
 }
+// GET ---> Busca(READ)
+// POST ---> Criar (CREATE)
+// PUT ---> Atualização e criação (UPDATE)
+// PATCH(?) ---> Atualização
+// DELETE ---> Apaga (DELETE)
