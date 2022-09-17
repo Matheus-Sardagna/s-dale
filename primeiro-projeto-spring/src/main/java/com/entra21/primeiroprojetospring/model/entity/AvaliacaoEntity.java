@@ -15,7 +15,7 @@ public class AvaliacaoEntity {
     private Long id;
 
     @Column(name = "nome_avaliador")
-    private String nomeAvaliardo;
+    private String nomeAvaliador;
 
     @Column(name = "nota")
     private Double nota;

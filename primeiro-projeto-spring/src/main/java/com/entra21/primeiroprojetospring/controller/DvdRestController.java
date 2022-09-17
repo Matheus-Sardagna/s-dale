@@ -19,6 +19,6 @@ public class DvdRestController {
     @GetMapping
     public List<DvdEntity> getAllDvds() {
         return dvdRepository.findAll();
-
     }
+
 }

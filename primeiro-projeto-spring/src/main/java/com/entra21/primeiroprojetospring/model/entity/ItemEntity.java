@@ -1,22 +1,20 @@
 package com.entra21.primeiroprojetospring.model.entity;
 
-import com.entra21.primeiroprojetospring.model.entity.AvaliacaoEntity;
-import com.entra21.primeiroprojetospring.model.entity.FranquiaEntity;
-import com.entra21.primeiroprojetospring.model.entity.GeneroEntity;
 import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Set;
 
 @Data
-@MappedSuperclass
+@Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "item")
 public abstract class ItemEntity {
+
     @Column(name = "id")
     @Id
-    @GeneratedValue(strategy =  GenerationType.IDENTITY)
-    private Long itemId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "titulo")
     private String titulo;
@@ -24,7 +22,7 @@ public abstract class ItemEntity {
     @Column(name = "valor_venda")
     private Double valorVenda;
 
-    @Column(name = "valor_Locacao")
+    @Column(name = "valor_locacao")
     private Double valorLocacao;
 
     @Column(name = "emprestado")
@@ -45,5 +43,5 @@ public abstract class ItemEntity {
     )
     private Set<GeneroEntity> generos;
 
-
+    public abstract String getType();
 }

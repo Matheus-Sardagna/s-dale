@@ -1,7 +1,7 @@
 package com.entra21.primeiroprojetospring.view.repository;
 
-import org.springframework.stereotype.Repository;
+import com.entra21.primeiroprojetospring.model.entity.GeneroEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@Repository
-public interface GeneroRepository  {
+public interface GeneroRepository extends JpaRepository<GeneroEntity, Long> {
 }
