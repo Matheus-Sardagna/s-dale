@@ -4,5 +4,6 @@ import lombok.Data;
 
 @Data
 public class FranquiaPayloadDTO {
+
     private String nome;
 }
