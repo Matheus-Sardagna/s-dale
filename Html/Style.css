@@ -1,0 +1,240 @@
+body{
+    /* background-image: url(https://pa1.narvii.com/6334/aac264f96aefb71b1347e01d538efcdb836b32f7_hq.gif);  */
+  
+}
+
+/*#Pr-1{
+
+    color: dimgray !important;
+}*/
+
+* {
+   font-family: 'Poppins'
+    /*para adicionar em tudo*/
+}
+/*
+u {
+    color: black;
+}
+
+b {
+    color: teal;
+}
+i {
+    color: darkgoldenrod;
+}*/
+
+table.con{
+    margin: 5% 15% 0% 15%;
+    width: 70%;
+}
+
+table{
+    /* border: 1px solid cornflowerblue; */
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table thead{
+    border-top-left-radius: 0%;
+    border-radius: 0%;
+}
+
+tfoot tr{
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 0;
+   
+}
+
+th{
+    text-align: start;
+    background-color: cornflowerblue;
+    padding: 8px 4px;
+}
+
+tfoot tr.filhotes td {
+    text-align: right;
+}
+
+small {
+    font-size: 12px;
+}
+
+tr{
+    border-bottom: 1px solid cornflowerblue;
+    border-right: 1px solid cornflowerblue;
+    border-left: 1px solid cornflowerblue;
+    
+}
+
+.w-50{
+    width: 50%;
+}
+
+.r-40{
+    width: 40%;
+}
+
+.edit-cell{
+    text-align: center;
+}
+
+.edit-cell button {
+    display: inline-block;
+}
+
+.edit-cell a:hover{
+    background-color: rgb(3, 112, 207);
+}
+
+.edit-cell a{
+    text-decoration: none;
+    background-color: cornflowerblue;
+    padding: 4px, 8px;
+    display: inline-block;
+    color: aliceblue;
+    border-radius: 4px;
+}
+
+.Titu{
+    text-decoration: none;
+    background-color: cornflowerblue;
+    padding: 4px 8px;
+    display: inline-block;
+    color: aliceblue;
+    border-radius: 10px;
+    text-align: center;
+    /* margin: 2px 40% 0% 40%;
+    width: 16%; */
+    display: inline-block;
+
+}
+
+
+
+.titi .Titu:hover{
+    background-image: url('https://c.tenor.com/EvNCyjP1IxQAAAAd/feliz-alegre.gif');
+    background-repeat: no-repeat;
+    background-size: 300px 35px;
+}
+/* ul{
+    text-align: center;
+   padding: 0%;
+   margin: 0 60px; 
+} */
+/* li{
+    list-style: none;
+} */
+
+h2.pagMinha{
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px){
+    body{
+        background-image: url(https://c.tenor.com/FKI1u4pGzjsAAAAM/kimetsu.gif);
+        background-size: 400px 702px;
+    }
+    li.titi{
+        margin: 0 48px; 
+
+}
+}
+
+.Titulos{
+    display: block ;
+    box-shadow: 8px 8px 8px black;
+    text-align: center;
+    background-image: url();
+    margin: 40px 150px;
+    padding: 30px;
+    
+}
+.questo{
+    display: inline-block;
+    text-align: center;
+    margin: 10px 5px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+#inserir{
+    border-radius: 20px;
+    margin: 290px 50px 50px 680px;
+    background-image: url(https://i.makeagif.com/media/4-04-2018/tqVg2W.gif);
+}
+
+#Titulinhos {
+    background-image: url(https://c.tenor.com/bw4tEDfUR44AAAAC/tijolada-ladr%C3%A3o.gif);
+}
+
+#tabelaas {
+    background-image: url(https://c.tenor.com/_n40rGDgKFgAAAAC/chloe-meme.gif);
+}
+
+.btn {
+    border: 0;
+    background-color: transparent;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.btn.btn-success {
+    background-color: rgba(75, 191, 75);
+}
+
+.btn.btn-success:hover {
+    background-color: rgb(100, 220, 100);
+}
+
+.btn.btn-success:active {
+    background-color: rgb(54, 153, 54);
+}
+
+.btn.btn-warning {
+    background-color: rgb(228, 209 , 62);
+}
+
+.btn.btn-warning:hover {
+    background-color: rgb(247, 227 , 77);
+}
+
+.btn.btn-warning:active {
+    background-color: rgb(179, 163 , 43);
+}
+
+.btn.btn-danger {
+    background-color: rgb(228, 62 , 62);
+}
+
+.btn.btn-danger:hover {
+    background-color: rgb(247, 77 , 77);
+}
+
+.btn.btn-danger:active {
+    background-color: rgb(179, 43 , 43);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .nav {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.container #img-container.margin {
+    margin: 24px 0px;
+}
+
+.container #img-container img {
+    border-radius: 8px;
+    border: 4px solid rgb(174, 0, 255);
+}
